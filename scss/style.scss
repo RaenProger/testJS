@@ -1,0 +1,60 @@
+$bgColor:grey;
+$blockWidth: 30%;
+$color:green; 
+$nameFontSize:1.1em; 
+
+
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+@mixin font ($color:red , $fontW:bold) {
+font-size:1.1em; 
+font-weight:$fontW; 
+font-famaly:Arial, Sans-Serif; 
+color:$color;
+}
+
+.block:not(.first){
+	background: $bgColor;
+	height: 200px;
+	margin-bottom: 20px;
+}
+
+.first{
+	background: $bgColor;
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+
+#central_block{
+padding:30%;
+
+ul{
+list-style:none; 
+display: inline-block; 
+}
+
+li{
+float:left; 
+margin-right:10px; 
+
+a{
+@include font ($fontW:bold , $color:blue); 
+}
+}
+
+a{
+
+@include font ($color, light); 
+
+}
+}
+
+
+/*#central_block>ul{
+list-style:none; 
+}*/
